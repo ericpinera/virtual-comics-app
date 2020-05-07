@@ -1,0 +1,22 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - echo "install step"
+      - echo "installing dependencies"
+      - npm i
+  pre_build:
+    commands:
+      - echo "pre_build step"
+      - echo "TESTS HERE"
+      - npm run test
+  build:
+    commands:
+      - echo "pre_build step"
+      - echo "building static content"
+      - npm run build
+  post_build:
+    commands:
+      - echo "post_build step"
+      - echo "coping files to s3"
+      - aws s3 sync ./out "s3://virtualcomics.com" --acl public-read --delete
