@@ -8,6 +8,6 @@ import {getStaticProps} from "../pages/index.js";
 describe ("getStaticProps", () => {
   it('should ', async () => {
     const res = await getStaticProps();
-    expect(res.props.comics[0].id).toEqual(52598);
+    expect(res.props.comics[0].id).toEqual(77608);
   });
 });
