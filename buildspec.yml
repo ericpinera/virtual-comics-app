@@ -19,4 +19,4 @@ phases:
     commands:
       - echo "post_build step"
       - echo "coping files to s3"
-      - aws s3 sync ./out "s3://virtualcomics.com" --acl public-read --delete
+      - aws s3 sync ./out "s3://virtualcomicsapp.com" --acl public-read --delete
